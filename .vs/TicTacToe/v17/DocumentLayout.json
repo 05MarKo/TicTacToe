@@ -7,7 +7,19 @@
       "RelativeMoniker": "D:0:0:{EC85223C-5F0F-1F9D-B45A-9D9BC3BA2DEC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC85223C-5F0F-1F9D-B45A-9D9BC3BA2DEC}|Assembly-CSharp.csproj|c:\\users\\stefa\\onedrive\\desktop\\learning projects\\tictactoe\\assets\\scripts\\uifader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EC85223C-5F0F-1F9D-B45A-9D9BC3BA2DEC}|Assembly-CSharp.csproj|C:\\Users\\stefa\\OneDrive\\Desktop\\Learning Projects\\TicTacToe\\assets\\scripts\\photonlobby.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC85223C-5F0F-1F9D-B45A-9D9BC3BA2DEC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\photonlobby.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC85223C-5F0F-1F9D-B45A-9D9BC3BA2DEC}|Assembly-CSharp.csproj|C:\\Users\\stefa\\OneDrive\\Desktop\\Learning Projects\\TicTacToe\\assets\\scripts\\gameinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC85223C-5F0F-1F9D-B45A-9D9BC3BA2DEC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC85223C-5F0F-1F9D-B45A-9D9BC3BA2DEC}|Assembly-CSharp.csproj|c:\\users\\stefa\\onedrive\\desktop\\learning projects\\tictactoe\\assets\\scripts\\buttons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC85223C-5F0F-1F9D-B45A-9D9BC3BA2DEC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\buttons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC85223C-5F0F-1F9D-B45A-9D9BC3BA2DEC}|Assembly-CSharp.csproj|C:\\Users\\stefa\\OneDrive\\Desktop\\Learning Projects\\TicTacToe\\assets\\scripts\\uifader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC85223C-5F0F-1F9D-B45A-9D9BC3BA2DEC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\uifader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,20 +30,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Buttons.cs",
+              "DocumentMoniker": "C:\\Users\\stefa\\OneDrive\\Desktop\\Learning Projects\\TicTacToe\\Assets\\Scripts\\Buttons.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Buttons.cs",
+              "ToolTip": "C:\\Users\\stefa\\OneDrive\\Desktop\\Learning Projects\\TicTacToe\\Assets\\Scripts\\Buttons.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Buttons.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-29T16:45:38.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GameInitializer.cs",
+              "DocumentMoniker": "C:\\Users\\stefa\\OneDrive\\Desktop\\Learning Projects\\TicTacToe\\Assets\\Scripts\\GameInitializer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameInitializer.cs",
+              "ToolTip": "C:\\Users\\stefa\\OneDrive\\Desktop\\Learning Projects\\TicTacToe\\Assets\\Scripts\\GameInitializer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameInitializer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-29T14:56:16.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "PhotonLobby.cs",
+              "DocumentMoniker": "C:\\Users\\stefa\\OneDrive\\Desktop\\Learning Projects\\TicTacToe\\Assets\\Scripts\\PhotonLobby.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PhotonLobby.cs",
+              "ToolTip": "C:\\Users\\stefa\\OneDrive\\Desktop\\Learning Projects\\TicTacToe\\Assets\\Scripts\\PhotonLobby.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PhotonLobby.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAqwEQAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-29T14:17:34.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "UIFader.cs",
               "DocumentMoniker": "C:\\Users\\stefa\\OneDrive\\Desktop\\Learning Projects\\TicTacToe\\Assets\\Scripts\\UIFader.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UIFader.cs",
               "ToolTip": "C:\\Users\\stefa\\OneDrive\\Desktop\\Learning Projects\\TicTacToe\\Assets\\Scripts\\UIFader.cs",
               "RelativeToolTip": "Assets\\Scripts\\UIFader.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAswFcAAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFcAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-28T18:59:43.498Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-28T18:59:43.498Z"
             },
             {
               "$type": "Document",
@@ -41,7 +91,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameController.cs",
               "ToolTip": "C:\\Users\\stefa\\OneDrive\\Desktop\\Learning Projects\\TicTacToe\\Assets\\Scripts\\GameController.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameController.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAwwHUAAABOAAAA",
+              "ViewState": "AQIAAK8AAAAAAAAAAAAYwMoAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-28T16:17:59.6Z",
               "EditorCaption": ""

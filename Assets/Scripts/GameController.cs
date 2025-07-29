@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Photon.Pun;
 
 public class GameController : MonoBehaviour
 {
+    private PhotonView photonView;
+
     public Sprite xSprite;
     public Sprite oSprite;
 
@@ -17,6 +20,8 @@ public class GameController : MonoBehaviour
 
     public GameObject restartButton;
     public CanvasGroup restartButtonGroup;
+    public GameObject mainMenuButton;
+    public CanvasGroup mainMenuButtonGroup;
 
     public GameObject[] buttons;
     private bool isXTurn = true;
@@ -31,37 +36,52 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
+        photonView = GetComponent<PhotonView>();
         UpdateTurnVisuals();
         ResetBoardState();
         restartButtonGroup.alpha = 0f;
         restartButtonGroup.interactable = false;
         restartButtonGroup.blocksRaycasts = false;
+
     }
 
     public void OnCellClicked(GameObject buttonObj)
     {
         if (gameEnded) return;
 
+        // Allow only the correct player to click
+        bool isMyTurn = (isXTurn && GameInitializer.LocalPlayerSymbol == GameInitializer.PlayerSymbol.X) ||
+                        (!isXTurn && GameInitializer.LocalPlayerSymbol == GameInitializer.PlayerSymbol.O);
+
+        if (!isMyTurn) return;
+
         int index = GetButtonIndex(buttonObj);
         if (index == -1 || board[index] != CellState.Empty) return;
 
-        // Mark UI
-        Transform markTransform = buttonObj.transform.Find("MarkImage");
+        // Broadcast move to all clients
+        photonView.RPC("RPC_MakeMove", RpcTarget.AllBuffered, index, isXTurn ? (int)CellState.X : (int)CellState.O);
+    }
+
+    [PunRPC]
+    void RPC_MakeMove(int index, int symbol)
+    {
+        if (board[index] != CellState.Empty || gameEnded) return;
+
+        CellState playerSymbol = (CellState)symbol;
+        board[index] = playerSymbol;
+
+        Transform markTransform = buttons[index].transform.Find("MarkImage");
         if (markTransform == null) return;
 
         Image markImage = markTransform.GetComponent<Image>();
-        markImage.sprite = isXTurn ? xSprite : oSprite;
+        markImage.sprite = playerSymbol == CellState.X ? xSprite : oSprite;
         markImage.gameObject.SetActive(true);
 
-        // Update board state
-        board[index] = isXTurn ? CellState.X : CellState.O;
-
-        // Check win
-        if (CheckWin(isXTurn ? CellState.X : CellState.O))
+        if (CheckWin(playerSymbol))
         {
             gameEnded = true;
 
-            if (isXTurn)
+            if (playerSymbol == CellState.X)
             {
                 xScore++;
                 xScoreText.text = xScore.ToString();
@@ -73,10 +93,28 @@ public class GameController : MonoBehaviour
             }
 
             UIFader.Instance.FadeCanvasGroup(restartButtonGroup, 1f, 0.5f);
+            UIFader.Instance.FadeCanvasGroup(mainMenuButtonGroup, 1f, 0.5f);
             return;
         }
 
-        // Switch turn
+        bool isBoardFull = true;
+        for (int i = 0; i < board.Length; i++)
+        {
+            if (board[i] == CellState.Empty)
+            {
+                isBoardFull = false;
+                break;
+            }
+        }
+
+        if (isBoardFull)
+        {
+            gameEnded = true;
+            UIFader.Instance.FadeCanvasGroup(restartButtonGroup, 1f, 0.5f);
+            UIFader.Instance.FadeCanvasGroup(mainMenuButtonGroup, 1f, 0.5f);
+            return;
+        }
+
         isXTurn = !isXTurn;
         UpdateTurnVisuals();
     }
@@ -116,6 +154,7 @@ public class GameController : MonoBehaviour
         gameEnded = false;
         UpdateTurnVisuals();
         UIFader.Instance.FadeCanvasGroup(restartButtonGroup, 0f, 0.2f, false);
+        UIFader.Instance.FadeCanvasGroup(mainMenuButtonGroup, 0f, 0.2f, false);
     }
 
     int GetButtonIndex(GameObject buttonObj)
@@ -132,9 +171,9 @@ public class GameController : MonoBehaviour
     {
         int[,] winConditions = new int[,]
         {
-            {0,1,2}, {3,4,5}, {6,7,8}, // rows
-            {0,3,6}, {1,4,7}, {2,5,8}, // cols
-            {0,4,8}, {2,4,6}           // diagonals
+            {0,1,2}, {3,4,5}, {6,7,8},
+            {0,3,6}, {1,4,7}, {2,5,8},
+            {0,4,8}, {2,4,6}
         };
 
         for (int i = 0; i < 8; i++)
@@ -149,7 +188,23 @@ public class GameController : MonoBehaviour
 
         return false;
     }
+
     public void RestartGame()
+    {
+        if (PhotonNetwork.IsMasterClient)
+        {
+            photonView.RPC("RPC_RestartGame", RpcTarget.AllBuffered);
+        }
+    }
+
+    public void GoToMainMenu()
+    {
+        PhotonNetwork.LeaveRoom(); // optional: leave Photon room if using networking
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+    }
+
+    [PunRPC]
+    void RPC_RestartGame()
     {
         ResetBoardState();
     }
