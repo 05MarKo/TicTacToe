@@ -4,28 +4,42 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Photon.Pun;
+using Photon.Realtime;
 
-public class GameController : MonoBehaviour
+public class GameController : MonoBehaviourPunCallbacks
 {
     private PhotonView photonView;
 
-    public Sprite xSprite;
-    public Sprite oSprite;
-
+    [Header("Player UI References")]
     public GameObject xPlayerRoot;
     public GameObject oPlayerRoot;
 
+    [Header("Score UI")]
     public TextMeshProUGUI xScoreText;
     public TextMeshProUGUI oScoreText;
 
+    [Header("UI Buttons")]
     public GameObject restartButton;
     public CanvasGroup restartButtonGroup;
     public GameObject mainMenuButton;
     public CanvasGroup mainMenuButtonGroup;
 
+    [Header("Gameplay")]
+    public Sprite xSprite;
+    public Sprite oSprite;
+    public Sprite sushiXSprite;
+    public Sprite sushiOSprite;
+    public Sprite cupcakeXSprite;
+    public Sprite cupcakeOSprite;
     public GameObject[] buttons;
+
+    public TextMeshProUGUI playerLeftText;
+
     private bool isXTurn = true;
     private bool gameEnded = false;
+    private bool isXStarting = true;
+    private bool localPlayerVotedRestart = false;
+    private bool remotePlayerVotedRestart = false;
 
     private int xScore = 0;
     private int oScore = 0;
@@ -43,6 +57,21 @@ public class GameController : MonoBehaviour
         restartButtonGroup.interactable = false;
         restartButtonGroup.blocksRaycasts = false;
 
+        if (ThemeManager.Instance != null)
+        {
+            var selectedTheme = ThemeManager.Instance.GetCurrentTheme();
+
+            if (selectedTheme == ThemeManager.ThemeType.Sushi)
+            {
+                xSprite = sushiXSprite; // Add a serialized field for this
+                oSprite = sushiOSprite;
+            }
+            else
+            {
+                xSprite = cupcakeXSprite;
+                oSprite = cupcakeOSprite;
+            }
+        }
     }
 
     public void OnCellClicked(GameObject buttonObj)
@@ -150,11 +179,14 @@ public class GameController : MonoBehaviour
             }
         }
 
-        isXTurn = true;
+        isXTurn = isXStarting;
         gameEnded = false;
         UpdateTurnVisuals();
         UIFader.Instance.FadeCanvasGroup(restartButtonGroup, 0f, 0.2f, false);
         UIFader.Instance.FadeCanvasGroup(mainMenuButtonGroup, 0f, 0.2f, false);
+
+        if (playerLeftText != null)
+            playerLeftText.gameObject.SetActive(false);
     }
 
     int GetButtonIndex(GameObject buttonObj)
@@ -191,9 +223,14 @@ public class GameController : MonoBehaviour
 
     public void RestartGame()
     {
-        if (PhotonNetwork.IsMasterClient)
+        if (!localPlayerVotedRestart)
         {
-            photonView.RPC("RPC_RestartGame", RpcTarget.AllBuffered);
+            localPlayerVotedRestart = true;
+
+            // Inform the other player that this one is ready
+            photonView.RPC("RPC_PlayerVotedRestart", RpcTarget.Others);
+
+            CheckRestartReadiness();
         }
     }
 
@@ -203,9 +240,53 @@ public class GameController : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
     }
 
+    void CheckRestartReadiness()
+    {
+        if (localPlayerVotedRestart && remotePlayerVotedRestart)
+        {
+            // Only the MasterClient actually sends the restart signal
+            if (PhotonNetwork.IsMasterClient)
+            {
+                photonView.RPC("RPC_RestartGame", RpcTarget.AllBuffered);
+            }
+        }
+    }
+
+    [PunRPC]
+    void RPC_PlayerVotedRestart()
+    {
+        remotePlayerVotedRestart = true;
+        CheckRestartReadiness();
+    }
+
     [PunRPC]
     void RPC_RestartGame()
     {
+        isXStarting = !isXStarting;
+        localPlayerVotedRestart = false;
+        remotePlayerVotedRestart = false;
         ResetBoardState();
+    }
+
+    public override void OnPlayerLeftRoom(Player otherPlayer)
+    {
+        ShowPlayerLeftMessage();
+    }
+    void ShowPlayerLeftMessage()
+    {
+        if (playerLeftText != null)
+        {
+            playerLeftText.gameObject.SetActive(true);
+            playerLeftText.text = "The other player left the game.";
+        }
+
+        // Show main menu button
+        UIFader.Instance.FadeCanvasGroup(mainMenuButtonGroup, 1f, 0.5f);
+
+        // Hide restart button
+        UIFader.Instance.FadeCanvasGroup(restartButtonGroup, 0f, 0.2f, false);
+
+        // End the game to block further interaction
+        gameEnded = true;
     }
 }

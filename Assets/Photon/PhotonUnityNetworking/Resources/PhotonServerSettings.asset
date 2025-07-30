@@ -41,6 +41,7 @@ MonoBehaviour:
   - RespawnSpaceship
   - RPC_MakeMove
   - RPC_RestartGame
+  - RPC_PlayerVotedRestart
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1
