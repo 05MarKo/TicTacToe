@@ -10,6 +10,7 @@ public class ThemeSprites
     public Sprite oSprite;
     public Sprite mainMenuSprite;
     public Sprite resetSprite;
+    public Sprite backgroundSprite;
 }
 
 public class ThemeApplier : MonoBehaviour
@@ -22,6 +23,7 @@ public class ThemeApplier : MonoBehaviour
     public Image oIcon;
     public Button mainMenuButton;
     public Button resetButton;
+    public Image backgroundImage;
 
     void Start()
     {
@@ -49,5 +51,6 @@ public class ThemeApplier : MonoBehaviour
         oIcon.sprite = theme.oSprite;
         mainMenuButton.image.sprite = theme.mainMenuSprite;
         resetButton.image.sprite = theme.resetSprite;
+        backgroundImage.sprite = theme.backgroundSprite;
     }
 }

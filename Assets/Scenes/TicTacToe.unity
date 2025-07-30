@@ -3463,6 +3463,7 @@ MonoBehaviour:
     oSprite: {fileID: 407556173155436288, guid: 1fe3d701fb25cc642b7207dd65aa9cbe, type: 3}
     mainMenuSprite: {fileID: 4009355068965086491, guid: c7f48a1431971114d8ef758ef9ce344b, type: 3}
     resetSprite: {fileID: -3739957133524300147, guid: ff98212561783b340944dcaacb1670a0, type: 3}
+    backgroundSprite: {fileID: 1302723820812287101, guid: 257c603afe27093408a4a1a896099437, type: 3}
   cupcakeTheme:
     squareSprites:
     - {fileID: 645580073487920352, guid: fe8fcbb28fd4649488ade9d3599d7f2a, type: 3}
@@ -3478,6 +3479,7 @@ MonoBehaviour:
     oSprite: {fileID: -3344113953907523657, guid: c02e3af49a4bf384fb110e87029d344f, type: 3}
     mainMenuSprite: {fileID: -3490603195307222542, guid: 1cc4a30454f44564095faad05261da6b, type: 3}
     resetSprite: {fileID: -6987446559664904850, guid: 7bcf7b56385166b499d23b00bdc807b3, type: 3}
+    backgroundSprite: {fileID: -4693249494274070682, guid: 4cb337de111da18418a718cb1ce16750, type: 3}
   squareButtons:
   - {fileID: 1332722902}
   - {fileID: 212688455}
@@ -3492,6 +3494,7 @@ MonoBehaviour:
   oIcon: {fileID: 1877669550}
   mainMenuButton: {fileID: 1927809936}
   resetButton: {fileID: 1334765270}
+  backgroundImage: {fileID: 1142958966}
 --- !u!4 &2073764704
 Transform:
   m_ObjectHideFlags: 0

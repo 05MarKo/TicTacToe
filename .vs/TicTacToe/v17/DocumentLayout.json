@@ -3,19 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\stefa\\OneDrive\\Desktop\\Learning Projects\\TicTacToe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EC85223C-5F0F-1F9D-B45A-9D9BC3BA2DEC}|Assembly-CSharp.csproj|C:\\Users\\stefa\\OneDrive\\Desktop\\Learning Projects\\TicTacToe\\assets\\scripts\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EC85223C-5F0F-1F9D-B45A-9D9BC3BA2DEC}|Assembly-CSharp.csproj|c:\\users\\stefa\\onedrive\\desktop\\learning projects\\tictactoe\\assets\\scripts\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC85223C-5F0F-1F9D-B45A-9D9BC3BA2DEC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC85223C-5F0F-1F9D-B45A-9D9BC3BA2DEC}|Assembly-CSharp.csproj|C:\\Users\\stefa\\OneDrive\\Desktop\\Learning Projects\\TicTacToe\\assets\\scripts\\themeapplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC85223C-5F0F-1F9D-B45A-9D9BC3BA2DEC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\themeapplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC85223C-5F0F-1F9D-B45A-9D9BC3BA2DEC}|Assembly-CSharp.csproj|C:\\Users\\stefa\\OneDrive\\Desktop\\Learning Projects\\TicTacToe\\assets\\scripts\\gameinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC85223C-5F0F-1F9D-B45A-9D9BC3BA2DEC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EC85223C-5F0F-1F9D-B45A-9D9BC3BA2DEC}|Assembly-CSharp.csproj|C:\\Users\\stefa\\OneDrive\\Desktop\\Learning Projects\\TicTacToe\\assets\\scripts\\thememanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC85223C-5F0F-1F9D-B45A-9D9BC3BA2DEC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\thememanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC85223C-5F0F-1F9D-B45A-9D9BC3BA2DEC}|Assembly-CSharp.csproj|c:\\users\\stefa\\onedrive\\desktop\\learning projects\\tictactoe\\assets\\scripts\\themeapplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC85223C-5F0F-1F9D-B45A-9D9BC3BA2DEC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\themeapplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC85223C-5F0F-1F9D-B45A-9D9BC3BA2DEC}|Assembly-CSharp.csproj|c:\\users\\stefa\\onedrive\\desktop\\learning projects\\tictactoe\\assets\\scripts\\themeselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EC85223C-5F0F-1F9D-B45A-9D9BC3BA2DEC}|Assembly-CSharp.csproj|C:\\Users\\stefa\\OneDrive\\Desktop\\Learning Projects\\TicTacToe\\assets\\scripts\\themeselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC85223C-5F0F-1F9D-B45A-9D9BC3BA2DEC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\themeselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -25,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{EC85223C-5F0F-1F9D-B45A-9D9BC3BA2DEC}|Assembly-CSharp.csproj|C:\\Users\\stefa\\OneDrive\\Desktop\\Learning Projects\\TicTacToe\\assets\\scripts\\uifader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC85223C-5F0F-1F9D-B45A-9D9BC3BA2DEC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\uifader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC85223C-5F0F-1F9D-B45A-9D9BC3BA2DEC}|Assembly-CSharp.csproj|C:\\Users\\stefa\\OneDrive\\Desktop\\Learning Projects\\TicTacToe\\assets\\scripts\\gameinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC85223C-5F0F-1F9D-B45A-9D9BC3BA2DEC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EC85223C-5F0F-1F9D-B45A-9D9BC3BA2DEC}|Assembly-CSharp.csproj|C:\\Users\\stefa\\OneDrive\\Desktop\\Learning Projects\\TicTacToe\\assets\\scripts\\buttons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,20 +46,20 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "ThemeApplier.cs",
               "DocumentMoniker": "C:\\Users\\stefa\\OneDrive\\Desktop\\Learning Projects\\TicTacToe\\Assets\\Scripts\\ThemeApplier.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ThemeApplier.cs",
               "ToolTip": "C:\\Users\\stefa\\OneDrive\\Desktop\\Learning Projects\\TicTacToe\\Assets\\Scripts\\ThemeApplier.cs",
               "RelativeToolTip": "Assets\\Scripts\\ThemeApplier.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAABAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwDUAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-30T14:26:48.121Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ThemeSelector.cs",
               "DocumentMoniker": "C:\\Users\\stefa\\OneDrive\\Desktop\\Learning Projects\\TicTacToe\\Assets\\Scripts\\ThemeSelector.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ThemeSelector.cs",
@@ -67,12 +67,11 @@
               "RelativeToolTip": "Assets\\Scripts\\ThemeSelector.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T14:22:53.217Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T14:22:53.217Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ThemeManager.cs",
               "DocumentMoniker": "C:\\Users\\stefa\\OneDrive\\Desktop\\Learning Projects\\TicTacToe\\Assets\\Scripts\\ThemeManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ThemeManager.cs",
@@ -80,8 +79,7 @@
               "RelativeToolTip": "Assets\\Scripts\\ThemeManager.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T12:38:25.117Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T12:38:25.117Z"
             },
             {
               "$type": "Document",
@@ -97,7 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "GameInitializer.cs",
               "DocumentMoniker": "C:\\Users\\stefa\\OneDrive\\Desktop\\Learning Projects\\TicTacToe\\Assets\\Scripts\\GameInitializer.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameInitializer.cs",
@@ -105,11 +103,12 @@
               "RelativeToolTip": "Assets\\Scripts\\GameInitializer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-29T14:56:16.744Z"
+              "WhenOpened": "2025-07-29T14:56:16.744Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "PhotonLobby.cs",
               "DocumentMoniker": "C:\\Users\\stefa\\OneDrive\\Desktop\\Learning Projects\\TicTacToe\\Assets\\Scripts\\PhotonLobby.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PhotonLobby.cs",
@@ -121,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "UIFader.cs",
               "DocumentMoniker": "C:\\Users\\stefa\\OneDrive\\Desktop\\Learning Projects\\TicTacToe\\Assets\\Scripts\\UIFader.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UIFader.cs",
@@ -139,7 +138,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameController.cs",
               "ToolTip": "C:\\Users\\stefa\\OneDrive\\Desktop\\Learning Projects\\TicTacToe\\Assets\\Scripts\\GameController.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameController.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAgwCAAAAAhAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAADoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-28T16:17:59.6Z",
               "EditorCaption": ""
